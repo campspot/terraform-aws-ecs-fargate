@@ -1,6 +1,7 @@
 variable "name_prefix" {
   description = "A prefix used for naming resources."
   type        = string
+  default     = "campspot-fargate-"
 }
 
 variable "sg_name_prefix" {
