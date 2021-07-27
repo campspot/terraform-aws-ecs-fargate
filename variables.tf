@@ -7,7 +7,7 @@ variable "name_prefix" {
 variable "sg_name_prefix" {
   description = "A prefix used for Security group name."
   type        = string
-  default     = ""
+  default     = "campspot-fg-"
 }
 
 variable "container_name" {
@@ -120,9 +120,14 @@ variable "health_check_grace_period_seconds" {
 variable "tags" {
   description = "A map of tags (key-value pairs) passed to resources."
   type        = map(string)
-  default     = {}
+  default     = {
+    name = "default-campspot-fargate",
+    customer = "",
+    environment = "",
+    costcenter = "",
+    application = "",
+  }
 }
-
 variable "deployment_minimum_healthy_percent" {
   default     = 50
   description = "The lower limit of the number of running tasks that must remain running and healthy in a service during a deployment"
