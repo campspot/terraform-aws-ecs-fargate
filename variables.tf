@@ -121,11 +121,11 @@ variable "tags" {
   description = "A map of tags (key-value pairs) passed to resources."
   type        = map(string)
   default     = {
-    name = "default-campspot-fargate",
-    customer = "",
-    environment = "",
-    costcenter = "",
-    application = "",
+    name        = "default-campspot-fargate",
+    customer    = "campspot-default",
+    environment = "default",
+    costcenter  = "default",
+    application = "default",
   }
 }
 variable "deployment_minimum_healthy_percent" {
